@@ -1,16 +1,15 @@
-const readline = require('readline').createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
+const readline = require('readline');
 const validations = require('./tools/validations');
 const operations = require('./operations/operations');
 
-
-readline.question(`Write an equation \n`, equation => {
+const readlineInterface =  readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+readlineInterface.question(`Write an equation \n`, equation => {
   const res = resolve(equation);
   console.log(`${res}`);
-  readline.close();
+  readlineInterface.close();
 });
 
 const resolve = (equation) => {
@@ -30,3 +29,7 @@ const resolve = (equation) => {
   } 
   return res;
 }
+
+
+module.exports = { resolve };
+exports.resolve = resolve;
