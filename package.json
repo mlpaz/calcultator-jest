@@ -3,19 +3,8 @@
   "version": "1.0.0",
   "description": "calculator script",
   "main": "src/calculator.js",
-  "jest": {
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "./src/**"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "lines": 90
-      }
-    }
-  },
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest"
   },
   "author": "Maximiliano Paz",
   "license": "ISC",
